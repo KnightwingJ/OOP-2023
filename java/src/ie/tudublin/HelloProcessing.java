@@ -11,22 +11,23 @@ public class HelloProcessing extends PApplet
 	}
 
 	public void setup() {
-		
+		background(255,0,0);
 		
 	}
 	
 	public void draw()
-	{	stroke(255);
-		line(10,10,100,100); //x1,y1,x2,y2
-		circle(300,250,70);//cx,cy,radius
-		fill(255,0,0);
-		rect(10,300,20,100); //topleft x, topleft y, w, h
-		stroke(127);
-		fill(255,255,0);
+	{	background(255,0,0);
 		noStroke();
-		noFill();
-		strokeWeight(1);
-		triangle(40,90,300,20,80,70);
-		fill(0,0,255);
+		fill(255,255,0);
+		circle(250,250,400);
+		fill(0,255,255);
+		triangle(250,0,40,400,460,400);
+		fill(150,150,150);
+		ellipse(250,230,200,120);
+		fill(mouseX,mouseY,mouseX);
+		circle(mouseX,mouseY,100);
+		//float eyeSize=map(mouseButton,0,height,100,150);
+		//ellipse(width/2,height/2,eyeSize,eyeSize);
+
 	}
 }
