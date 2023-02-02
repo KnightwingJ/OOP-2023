@@ -8,20 +8,21 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new HelloProcessing());
     }
+
+	public static void bugZap()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new BugZap());
+    }
 	
 	public static void main(String[] args)
 	{
 		
 		System.out.println("Hello world");
 		
-		Cat ginger = new Cat();
-		ginger.setName("Ginger");
-		ginger.setnumLives(9);
-		//System.out.println(ginger.getnumLives());
-		while(ginger.getnumLives()>0)
-		{
-			ginger.Kill();
-		}
+		Dog penny = new Dog();
+		penny.setName("Penny");
+		penny.speak();
 	}
 	
 }
