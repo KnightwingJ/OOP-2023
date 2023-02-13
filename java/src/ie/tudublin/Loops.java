@@ -8,7 +8,7 @@ public class Loops extends PApplet {
 
 	public void settings() {
 		size(1000, 1000);
-		fullScreen(SPAN);
+		//fullScreen(SPAN);
 	}
 
 	public void setup() {
@@ -25,7 +25,7 @@ public class Loops extends PApplet {
 
 	public void draw() {
 		background(0);
-		fill(255);
+		//fill(255);
 		noStroke();
 
 		switch (mode) {
@@ -44,6 +44,15 @@ public class Loops extends PApplet {
 				off += (mouseY / 50.0f);
 				break;
 			case 1:
+				int numSquares=(int) (mouseX/10.0f);
+				float w = width/(float)numSquares;
+				float colour=255/(float)numSquares;
+				for (int i=0;i<numSquares;i++)
+				{
+					fill(i*colour,255,255);
+					rect(i*w,0,w,height);
+				}
+
 				break;
 			default:
 				break;
