@@ -32,7 +32,7 @@ public class Main
 		
 		System.out.println("Hello world");
 		
-		Dog penny = new Dog();
+		Cat penny = new Cat();
 		penny.setName("Penny");
 		penny.speak();
 
