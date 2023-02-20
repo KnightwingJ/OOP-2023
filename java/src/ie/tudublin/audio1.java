@@ -1,6 +1,9 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import ddf.minim.AudioBuffer;
+import ddf.minim.AudioInput;
+import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
 
 public class audio1 extends PApplet
