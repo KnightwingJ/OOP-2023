@@ -38,17 +38,27 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Audio2());
     }
+
+	public static void PitchSpeller()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new PitchSpeller());
+    }
 	
 	public static void main(String[] args)
 	{
 		
 		System.out.println("Hello world");
 		
-		Dog penny = new Dog();
+		Cat penny = new Cat();
 		penny.setName("Penny");
 		penny.speak();
 
 		audio2();
+		PitchSpeller ps=new PitchSpeller();
+		System.out.println(ps.spell(330.00f));
+		System.out.println(ps.spell(420));
+		System.out.println(ps.spell(1980));
 	}
 	
 }

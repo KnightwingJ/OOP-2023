@@ -25,8 +25,12 @@ public class Audio2 extends PApplet{
     public void setup()
     {
         m = new Minim(this);
-        ai = m.getLineIn(Minim.MONO, width, 44100, 16);
-        ab = ai.mix;
+        //ai = m.getLineIn(Minim.MONO, width, 44100, 16);
+        //ab = ai.mix;
+        ap =m.loadFile("scale.wav",1024);
+        ap.play();
+        ab = ap.mix;
+        
         lerpedBuffer = new float[width];
 
         fft = new FFT(width, 44100);
@@ -66,9 +70,12 @@ public class Audio2 extends PApplet{
         textSize(20);
         text("Freq: " + freq, 100, 100);
 
+        PitchSpeller ps =new PitchSpeller();
+        text("Note: " + ps.spell(freq),100,150);
+
         float y = map(freq, 1000.0f, 2500.0f, height, 0);
         lerpedY = lerp(lerpedY, y, 0.1f);
-        circle(200, y, 50);
+        //circle(200, y, 50);
         circle(300, lerpedY, 50);
         
 
